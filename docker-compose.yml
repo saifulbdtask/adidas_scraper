@@ -3,4 +3,7 @@ services:
   scrapy:
     build: .
     volumes:
-      - .:/usr/src/app
+      - .:/app
+    environment:
+      TWISTED_REACTOR: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+      
